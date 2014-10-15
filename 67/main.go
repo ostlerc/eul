@@ -7,7 +7,6 @@ import (
 )
 
 var (
-	tri  string
 	ctri [][]int
 	memo = make(map[int]map[int]int)
 )
@@ -17,8 +16,7 @@ func init() {
 	if err != nil {
 		panic(err)
 	}
-	tri = string(dat)
-	ctri = loadTri(tri)
+	ctri = loadTri(string(dat))
 }
 
 func get(x, y int) (int, bool) {
